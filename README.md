@@ -1,5 +1,6 @@
 ### Claudio Visentin
 # Star Trek - Deep Space Nine </br> Sacrfice of Angels Battle
+# Scene Breakdown
 ## Scene 1
 ![Scene 1](https://github.com/Claudio-Visentin/GE2_SpaceBattle_ClaudioVisentin/blob/master/Screenshots/Scene%201.png)
 - The camera should follow the first spaceship and then pan out to show all of the four attacking spaceships.

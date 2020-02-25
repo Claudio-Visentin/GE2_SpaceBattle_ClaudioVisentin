@@ -27,7 +27,7 @@
 
 ## Scene 6
 ![Scene 6](https://github.com/Claudio-Visentin/GE2_SpaceBattle_ClaudioVisentin/blob/master/Screenshots/Scene%206.png)
-- In the final scene, we see the Defiance breaking through followed by the Klingon's and at the end destroying a massive spaceship
+- In the final scene, we see the Defiance breaking through followed by the Klingons and at the end destroying a massive spaceship
 
 # List of Assets used and Credits
 - Cinemachine by Unity

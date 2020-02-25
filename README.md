@@ -18,10 +18,13 @@
 
 ## Scene 4
 ![Scene 4](https://github.com/Claudio-Visentin/GE2_SpaceBattle_ClaudioVisentin/blob/master/Screenshots/Scene%204.png)
-- In this scene, we see new units entering the battle.
+- In this scene, we see new Klingon units entering the battle and breaking the Dominion's defense lines.
 - The camera is in two different static positions, looking at the ships entering the fight
 
 ## Scene 5
 ![Scene 5](https://github.com/Claudio-Visentin/GE2_SpaceBattle_ClaudioVisentin/blob/master/Screenshots/Scene%205.png)
-- In this scene, we see new units entering the battle.
-- The camera is in two different static positions, looking at the ships entering the fight
+- In this scene, we see the crew discussing what's happening and making plans for what to do, deciding to enter the Dominion's lines.
+
+## Scene 6
+![Scene 6](https://github.com/Claudio-Visentin/GE2_SpaceBattle_ClaudioVisentin/blob/master/Screenshots/Scene%206.png)
+- In the final scene, we see the Defiance breaking through followed by the Klingon's and at the end destroying a massive spaceship

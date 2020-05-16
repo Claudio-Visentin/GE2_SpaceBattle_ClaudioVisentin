@@ -1429,6 +1429,10 @@ MonoBehaviour:
   scene2: {fileID: 32900000, guid: 2a87960a3cc2d984f817641bdd4782b0, type: 3}
   scene5: {fileID: 32900000, guid: fce9b92e9fb7f004c8197b02caabf121, type: 3}
   Scene: 
+  scene1: {fileID: 2035066722}
+  scene3: {fileID: 275186043}
+  scene4: {fileID: 1332371242}
+  scene6: {fileID: 742653834}
 --- !u!4 &256497617
 Transform:
   m_ObjectHideFlags: 0
@@ -1892,9 +1896,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdd56baaacee9d946a898414808619bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainship: {fileID: 190226766}
+  mainship: {fileID: 1939157830}
   offset: {x: 30.7, y: 2.4, z: -36.8}
-  speed: 1
+  speed: 0.45
+  rotationspeed: 5
 --- !u!4 &357372146 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 186af66bfbc13764aa16e9f1161119f7,
@@ -3795,9 +3800,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdd56baaacee9d946a898414808619bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainship: {fileID: 190226766}
+  mainship: {fileID: 1939157830}
   offset: {x: -30.7, y: 2.4, z: -36.8}
-  speed: 1
+  speed: 0.45
+  rotationspeed: 4
 --- !u!54 &1088858337
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6115,7 +6121,7 @@ MonoBehaviour:
   - {fileID: 221889901}
   - {fileID: 376008175}
   index: 0
-  speed: 0.5
+  speed: 0.45
   rotationspeed: 5
   loop: 1
 --- !u!54 &1939157831
@@ -6505,7 +6511,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2035066723
 Transform:
   m_ObjectHideFlags: 0
@@ -6643,9 +6649,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdd56baaacee9d946a898414808619bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainship: {fileID: 190226766}
+  mainship: {fileID: 1939157830}
   offset: {x: 0, y: -5, z: -32}
-  speed: 1
+  speed: 0.45
+  rotationspeed: 5
 --- !u!54 &2065114946
 Rigidbody:
   m_ObjectHideFlags: 0

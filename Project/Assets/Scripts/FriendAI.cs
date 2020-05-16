@@ -2,14 +2,16 @@
 
 public class FriendAI : MonoBehaviour
 {
-    public Transform mainship;
+    public PathFinder mainship;
     public Vector3 offset;
     public float speed;
+    public float rotationspeed;
     void Update()
     {
-        Vector3 randomfactor = new Vector3 (Random.Range(0, 2), 0f, Random.Range(0, 2));
-        Vector3 nextmove = mainship.position + offset;
+        Vector3 randomfactor = new Vector3 (Random.Range(0, 0.1f), 0f, Random.Range(0, 0.1f));
+        Vector3 nextmove = mainship.Waypoints [mainship.index].position + offset + randomfactor;
         transform.position = Vector3.MoveTowards(transform.position, nextmove, speed);
-        transform.rotation = mainship.rotation;
+        Quaternion targetrotation = Quaternion.LookRotation(mainship.Waypoints[mainship.index].position - transform.position);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetrotation, rotationspeed * Time.deltaTime);
     }
 }

@@ -54,7 +54,7 @@ public class CameraScript : MonoBehaviour
     }
     public IEnumerator Scene1()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         scene1part1 = true;
     }
 }

@@ -9,6 +9,11 @@ public class SceneDirector : MonoBehaviour
     public VideoClip scene5;
     public string Scene;
 
+    public GameObject scene1;
+    public GameObject scene3;
+    public GameObject scene4;
+    public GameObject scene6;
+
     void Start()
     {
         video.renderMode = VideoRenderMode.CameraNearPlane;
@@ -22,17 +27,23 @@ public class SceneDirector : MonoBehaviour
         video.clip = scene2;
         video.Play();
         Scene = "Scene2";
+        scene1.SetActive(false);
         yield return new WaitForSeconds(20f);
         video.Stop();
         Scene = "Scene3";
+        scene3.SetActive(true);
         yield return new WaitForSeconds(5f);
         Scene = "Scene4";
+        scene3.SetActive(false);
+        scene4.SetActive(true);
         yield return new WaitForSeconds(9f);
         Scene = "Scene5";
         video.clip = scene5;
         video.Play();
+        scene4.SetActive(false);
         yield return new WaitForSeconds(8f);
         Scene = "Scene6";
+        scene6.SetActive(true);
         video.Stop();
     }
 }

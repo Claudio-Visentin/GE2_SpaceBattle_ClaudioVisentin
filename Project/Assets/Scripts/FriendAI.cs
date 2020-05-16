@@ -11,7 +11,6 @@ public class FriendAI : MonoBehaviour
         Vector3 randomfactor = new Vector3 (Random.Range(0, 0.1f), 0f, Random.Range(0, 0.1f));
         Vector3 nextmove = mainship.Waypoints [mainship.index].position + offset + randomfactor;
         transform.position = Vector3.MoveTowards(transform.position, nextmove, speed);
-        Quaternion targetrotation = Quaternion.LookRotation(mainship.Waypoints[mainship.index].position - transform.position);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetrotation, rotationspeed * Time.deltaTime);
+        transform.rotation = mainship.gameObject.transform.rotation;
     }
 }

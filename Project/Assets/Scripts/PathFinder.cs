@@ -10,14 +10,18 @@ public class PathFinder : MonoBehaviour
     public float speed;
     public float rotationspeed;
     public bool loop;
+    public bool movesideways;
     
-    void Start () {
+    void Awake () {
         rigid = GetComponent <Rigidbody> ();
         
     }
     void Update () {
-        Quaternion targetrotation = Quaternion.LookRotation (Waypoints[index].position - transform.position);
-        transform.rotation = Quaternion.Slerp (transform.rotation, targetrotation, rotationspeed * Time.deltaTime);
+        if (movesideways == false)
+        {
+            Quaternion targetrotation = Quaternion.LookRotation(Waypoints[index].position - transform.position);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetrotation, rotationspeed * Time.deltaTime);
+        }
         transform.position = Vector3.MoveTowards (transform.position, Waypoints [index].position, speed);
          if (Vector3.Distance (Waypoints [index].position, transform.position) < 1) {
              NewPoint();

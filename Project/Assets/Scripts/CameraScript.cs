@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class CameraScript : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class CameraScript : MonoBehaviour
 
     bool scene6part1check = false;
     bool scene6part2 = false;
+    bool endfade = false;
+    public Image black;
 
     void FixedUpdate()
     {
@@ -89,6 +92,15 @@ public class CameraScript : MonoBehaviour
                 transform.LookAt(spaceship.position);
             }
         }
+        if (endfade == true)
+        {
+            if (black.color.a < 0.99)
+            {
+                var tempColor = black.color;
+                tempColor.a += 0.03f;
+                black.color = tempColor;
+            }
+        }
     }
     public IEnumerator Scene1()
     {
@@ -120,6 +132,7 @@ public class CameraScript : MonoBehaviour
         transform.parent = spaceship;
         yield return new WaitForSeconds(2.5f);
         transform.parent = null;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.3f);
+        endfade = true;
     }
 }

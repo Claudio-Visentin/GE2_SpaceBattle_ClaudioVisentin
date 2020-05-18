@@ -13,7 +13,11 @@ public class CameraScript : MonoBehaviour
     bool scene3start = false;
 
     bool scene4start = false;
-    void Update()
+
+    bool scene6part1check = false;
+    bool scene6part2 = false;
+
+    void FixedUpdate()
     {
         if (scene.Scene == "Scene1")
         {
@@ -67,7 +71,23 @@ public class CameraScript : MonoBehaviour
         }
         if (scene.Scene == "Scene6")
         {
-
+            //Part 1
+            if (scene6part1check == false)
+            {
+                transform.position = new Vector3(-331f, 78f, 234f);
+                StartCoroutine("Scene6");
+                scene6part1check = true;
+            }
+            if (scene6part1check == true && scene6part2 == false)
+            {
+                transform.LookAt(spaceship.position);
+                transform.position = Vector3.MoveTowards(transform.position, spaceship.position, speed);
+            }
+            //Part 2
+            if (scene6part2 == true && scene6part1check == true)
+            {
+                transform.LookAt(spaceship.position);
+            }
         }
     }
     public IEnumerator Scene1()
@@ -87,5 +107,19 @@ public class CameraScript : MonoBehaviour
         spaceship = GameObject.FindGameObjectWithTag("MainShip").transform;
         yield return new WaitForSeconds(8.9f);
         transform.parent = null;
+    }
+    public IEnumerator Scene6()
+    {
+        spaceship = GameObject.FindGameObjectWithTag("MainShip").transform;
+        yield return new WaitForSeconds(3.7f);
+        transform.parent = null;
+        yield return new WaitForSeconds(0.3f);
+        scene6part2 = true;
+        spaceship = GameObject.FindGameObjectWithTag("MainShip").transform;
+        transform.position = new Vector3(302.7f, 73.1f, 286.1f);
+        transform.parent = spaceship;
+        yield return new WaitForSeconds(2.5f);
+        transform.parent = null;
+        yield return new WaitForSeconds(1.5f);
     }
 }

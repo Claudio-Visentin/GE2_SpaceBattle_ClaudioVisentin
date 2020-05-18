@@ -12,7 +12,8 @@ public class SceneDirector : MonoBehaviour
     public GameObject scene1;
     public GameObject scene3;
     public GameObject scene4;
-    public GameObject scene6;
+    public GameObject scene6part1;
+    public GameObject scene6part2;
 
     void Start()
     {
@@ -42,9 +43,12 @@ public class SceneDirector : MonoBehaviour
         video.clip = scene5;
         video.Play();
         scene4.SetActive(false);
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(9f);
         Scene = "Scene6";
-        scene6.SetActive(true);
+        scene6part1.SetActive(true);
         video.Stop();
+        yield return new WaitForSeconds(3.8f);
+        scene6part1.SetActive(false);
+        scene6part2.SetActive(true);       
     }
 }

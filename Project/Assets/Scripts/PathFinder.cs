@@ -16,7 +16,7 @@ public class PathFinder : MonoBehaviour
         rigid = GetComponent <Rigidbody> ();
         
     }
-    void Update () {
+    void FixedUpdate () {
         if (movesideways == false)
         {
             Quaternion targetrotation = Quaternion.LookRotation(Waypoints[index].position - transform.position);

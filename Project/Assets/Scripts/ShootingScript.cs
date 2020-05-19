@@ -10,6 +10,7 @@ public class ShootingScript : MonoBehaviour
     public Transform laserstarter;
     public float waitbeforedestroying;
     public bool repeat;
+    public bool destroy;
 
     void Awake()
     {
@@ -22,8 +23,11 @@ public class ShootingScript : MonoBehaviour
         GameObject instlaser = Instantiate(laser, laserstarter.transform);
         instlaser.transform.parent = laserstarter;
         instlaser.GetComponent<Rigidbody>().AddRelativeForce(direction);
-        yield return new WaitForSeconds(waitbeforedestroying);
-        Destroy(instlaser);
+        if (destroy == true)
+        {
+            yield return new WaitForSeconds(waitbeforedestroying);
+            Destroy(instlaser);
+        }
         if (repeat == true)
         {
             StartCoroutine("Shoot");

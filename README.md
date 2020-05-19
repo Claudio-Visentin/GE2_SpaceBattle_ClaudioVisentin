@@ -31,8 +31,7 @@
 - In the final scene, we see the Defiance breaking through followed by the Klingons and at the end destroying a massive spaceship
 
 # List of Assets used and Credits
-- Cinemachine by Unity
 - Post Processing Stack by Unity
 - Spaceships models by Viktor Hahn, licensed under the Creative Commons Attribution 3.0 Unported License - found on OpenGameArt (https://opengameart.org/content/spaceships-6) (https://opengameart.org/content/more-spaceships)
-- Lasers and Beams from OpenGameArt, licensed as Public Domain by user Rawdanitsu (https://opengameart.org/content/lasers-and-beams)
+- FX Explosion Pack by GAPH on the Unity Asset Store (https://assetstore.unity.com/packages/vfx/particles/fire-explosions/fx-explosion-pack-30102)
 - Starfield Skybox by Pulsar Bytes on the Unity Asset Store (https://assetstore.unity.com/packages/2d/textures-materials/sky/starfield-skybox-92717)

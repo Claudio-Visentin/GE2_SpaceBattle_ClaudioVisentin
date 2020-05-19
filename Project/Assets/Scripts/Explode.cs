@@ -6,6 +6,7 @@ public class Explode : MonoBehaviour
     public float timer;
     public GameObject explosion;
     public GameObject spaceship;
+    public GameObject laser;
     void Awake()
     {
         StartCoroutine("Exploder");
@@ -17,5 +18,6 @@ public class Explode : MonoBehaviour
         yield return new WaitForSeconds(timer);
         GameObject explosioninst = Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(spaceship);
+        Destroy(laser);
     }
 }

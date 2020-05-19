@@ -8,6 +8,7 @@ public class ShootingScript : MonoBehaviour
     public GameObject laser;
     public Vector3 direction;
     public Transform laserstarter;
+    public float waitbeforedestroying;
     public bool repeat;
 
     void Awake()
@@ -21,7 +22,7 @@ public class ShootingScript : MonoBehaviour
         GameObject instlaser = Instantiate(laser, laserstarter.transform);
         instlaser.transform.parent = laserstarter;
         instlaser.GetComponent<Rigidbody>().AddRelativeForce(direction);
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(waitbeforedestroying);
         Destroy(instlaser);
         if (repeat == true)
         {

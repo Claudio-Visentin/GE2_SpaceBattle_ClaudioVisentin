@@ -43,7 +43,7 @@ public class SceneDirector : MonoBehaviour
         video.clip = scene5;
         video.Play();
         scene4.SetActive(false);
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(9.2f);
         Scene = "Scene6";
         scene6part1.SetActive(true);
         video.Stop();

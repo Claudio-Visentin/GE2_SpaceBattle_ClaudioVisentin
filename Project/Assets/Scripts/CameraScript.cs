@@ -20,6 +20,8 @@ public class CameraScript : MonoBehaviour
     bool endfade = false;
     public Image black;
 
+    public Animator anim;
+
     void FixedUpdate()
     {
         if (scene.Scene == "Scene1")
@@ -134,5 +136,7 @@ public class CameraScript : MonoBehaviour
         transform.parent = null;
         yield return new WaitForSeconds(1.3f);
         endfade = true;
+        yield return new WaitForSeconds(1.2f);
+        anim.SetBool("play", true);
     }
 }

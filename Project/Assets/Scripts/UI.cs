@@ -5,6 +5,7 @@ using UnityEngine;
 public class UI : MonoBehaviour
 {
     public GameObject ui;
+    public AudioSource audio;
 
     void Awake()
     {
@@ -22,6 +23,7 @@ public class UI : MonoBehaviour
     public void OnStart ()
     {
         Time.timeScale = 1;
+        audio.Play();
         ui.SetActive(false);
     }
 }

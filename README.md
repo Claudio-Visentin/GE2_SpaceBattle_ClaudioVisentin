@@ -1,5 +1,10 @@
 ### Claudio Visentin
 # Star Trek - Deep Space Nine </br> Sacrfice of Angels Battle
+
+# Assignment Description
+The goal of the current assignment is to recreate the space battle in the episode "Sacrfice of Angels" from the serie "Start Trek- Deep Space Nine".
+All the "animations" seen in the recreation should work thanks to code and AI and not by using the animator in Unity.
+
 # Scene Breakdown
 ## Scene 1
 ![Scene 1](https://github.com/Claudio-Visentin/GE2_SpaceBattle_ClaudioVisentin/blob/master/Screenshots/Scene%201.png)
@@ -29,6 +34,20 @@
 ## Scene 6
 ![Scene 6](https://github.com/Claudio-Visentin/GE2_SpaceBattle_ClaudioVisentin/blob/master/Screenshots/Scene%206.png)
 - In the final scene, we see the Defiance breaking through followed by the Klingons and at the end destroying a massive spaceship
+
+# Instructions
+Download the project, press play and simply click "Start", the scene will play by itself.
+
+# How Does It Work
+The project is timed and directed by a main script which, thanks to a coroutine, times the start of each scene.
+During each scene, the main spaceship will follow a trail set through waypoints while the friendly spaceships will either follow the main one or follow their own path.
+A separate script will time the laser shots each spaceship take.
+The cutscenes with human characters have been left intact in order to focus more on the spaceships scenes.
+Another script also times the explosions, spawning an "explosion effect" and destroying the spaceship models.
+
+# What I Am Most Proud Of
+I am mainly proud of the level of cinematic quality accomplished in the assignment, using proper camera angles, effects and post-processing.
+I am also proud of how the action syncs up well with what happens in the recreated scenes.
 
 # List of Assets used and Credits
 - Post Processing Stack by Unity
